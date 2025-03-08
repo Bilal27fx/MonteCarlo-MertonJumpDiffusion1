@@ -21,8 +21,7 @@ class MonteCarloSimulator_BlackScholes:
         payoffs = np.maximum(self.k - St, 0)  
         PutPrice = np.exp(-self.r * self.T) * np.mean(payoffs)  
         return PutPrice
-   
-    
+  
 
 class MonteCarloSimulator_MertonJumpDiffusion:
     def __init__(self, S0, r, sigma, T, k, n_simulations, lambda_jump, mu_jump, sigma_jump, n_pas):
@@ -59,8 +58,7 @@ class MonteCarloSimulator_MertonJumpDiffusion:
         payoffs = np.maximum(self.k - St[:, -1], 0)  # Calcul des payoffs de l'option Put
         PutPrice = np.exp(-self.r * self.T) * np.mean(payoffs)  # Actualisation du prix de l'option Put
         return PutPrice
-    
-    
+ 
 
     
 
